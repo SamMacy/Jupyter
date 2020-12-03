@@ -5,8 +5,8 @@
 
 #### yes, even hidden code blocks!
 
-```python
-print("hello world!")
+```console
+This is collapsible
 ```
 
 </p>

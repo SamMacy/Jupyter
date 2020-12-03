@@ -1,12 +1,12 @@
-## collapsible markdown?
+## A repository
 
-<details><summary>CLICK ME</summary>
+<details><summary>Optional instructions</summary>
 <p>
 
-#### yes, even hidden code blocks!
+:thinking: This does something
 
 ```console
-This is collapsible
+sudo this is some code
 ```
 
 </p>

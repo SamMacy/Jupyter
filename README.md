@@ -3,7 +3,7 @@
 <details><summary>Optional instructions</summary>
 <p>
   
-###header
+### header
 :thinking: This does something
 
 ```console

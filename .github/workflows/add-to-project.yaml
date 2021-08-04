@@ -2,7 +2,9 @@ name: Auto Assign to Project(s)
 
 on:
   issues:
-    types: [opened, labeled]
+    types:
+      - reopened
+      - opened
 
 env:
   MY_GITHUB_TOKEN: ${{ secrets.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 }}

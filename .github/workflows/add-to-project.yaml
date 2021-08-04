@@ -16,6 +16,5 @@ jobs:
     steps:
     - name: Assign NEW issues requests to project 2
       uses: srggrs/assign-one-project-github-action@1.2.1
-      if: github.event_name == 'opened'
       with:
         project: 'https://github.com/users/SamMacy/projects/2'

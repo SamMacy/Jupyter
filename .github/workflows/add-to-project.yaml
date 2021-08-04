@@ -7,7 +7,7 @@ on:
       - opened
 
 env:
-  MY_GITHUB_TOKEN: ${{ secrets.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 }}
+  MY_GITHUB_TOKEN: ${{ secrets.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 }}
 
 jobs:
   assign_one_project:

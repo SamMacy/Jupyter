@@ -16,4 +16,4 @@ jobs:
     - name: Assign NEW issues requests to project 2
       uses: srggrs/assign-one-project-github-action@1.2.1
       with:
-        project: 'https://github.com/SamMacy/Jupyter/projects/2'
+        project: 'https://github.com/users/SamMacy/projects/2'

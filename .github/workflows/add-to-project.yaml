@@ -17,7 +17,7 @@ jobs:
     - name: Get repository
       run: echo ${REPO_NAME}
     - name: Assign NEW issues and NEW pull requests to project 2
-      uses: srggrs/assign-one-project-github-action@1.2.1
+      uses: SamMacy/assign-one-project-github-action@latest
       if: github.event.action == 'opened'
       with:
         project: 'https://github.com/SamMacy/Jupyter/projects/2'

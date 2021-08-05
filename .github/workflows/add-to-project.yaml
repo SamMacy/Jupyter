@@ -18,4 +18,6 @@ jobs:
       uses: SamMacy/assign-one-project-github-action@master
       if: github.event.action == 'opened'
       with:
+        project1: 'https://github.com/orgs/Senzing/projects/2'
+        project2: 'https://github.com/users/SamMacy/projects/2'
         column_name: 'Backlog'

@@ -7,7 +7,7 @@ on:
     types: [opened, labeled]
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
-  REPO_NAME: ${{ github.event.repository.url}}
+  REPO_URL: ${{ github.event.repository.url}}
 
 jobs:
   assign_one_project:

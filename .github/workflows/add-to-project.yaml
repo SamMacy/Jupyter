@@ -19,4 +19,5 @@ jobs:
       if: github.event.action == 'opened'
       with:
         project: 'https://github.com/SamMacy/Jupyter/projects/2'
+        project1: 'test'
         column_name: 'Backlog'

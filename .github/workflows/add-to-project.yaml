@@ -2,7 +2,7 @@ name: Auto Assign to Project(s)
 
 on:
   issues:
-    types: [opened, labeled, closed]
+    types: [opened, labeled]
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
   REPO_URL: ${{ github.event.repository.url}}
@@ -12,14 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Assign to One Project
     steps:
-    - name: repo url
-      run: echo ${REPO_NAME}
     - name: Assign NEW issues and NEW pull requests to project 2
       uses: SamMacy/assign-one-project-github-action@1.3.0
-      if: github.event.action == 'opened'
       with:
-        project1: 'https://github.com/users/SamMacy/projects/2'
-        project2: 'https://github.com/users/SamMacy/projects/3'
+        project1: 'https://github.com/orgs/Senzing/projects/2'
+        project2: 'https://github.com/orgs/Senzing/projects/6'
         topic1: 't-comm'
-        topic2: 't-testing'
+        topic2: 't-ast'
         column_name: 'Backlog'

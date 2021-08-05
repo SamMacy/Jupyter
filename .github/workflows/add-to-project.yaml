@@ -15,7 +15,7 @@ jobs:
     - name: repo url
       run: echo ${REPO_NAME}
     - name: Assign NEW issues and NEW pull requests to project 2
-      uses: SamMacy/assign-one-project-github-action@master
+      uses: SamMacy/assign-one-project-github-action@1.3.0
       if: github.event.action == 'opened'
       with:
         project1: 'https://github.com/users/SamMacy/projects/2'

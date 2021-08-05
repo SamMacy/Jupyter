@@ -2,9 +2,7 @@ name: Auto Assign to Project(s)
 
 on:
   issues:
-    types: [opened, labeled]
-  pull_request_target:
-    types: [opened, labeled]
+    types: [opened, labeled, closed]
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
   REPO_URL: ${{ github.event.repository.url}}

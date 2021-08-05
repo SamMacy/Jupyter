@@ -7,13 +7,15 @@ on:
     types: [opened, labeled]
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
-  REPO_NAME: ${{ github.event.repository.name}}
+  REPO_NAME: ${{ github.event.repository.url}}
 
 jobs:
   assign_one_project:
     runs-on: ubuntu-latest
     name: Assign to One Project
     steps:
+    - name: repo url
+      run: echo ${REPO_NAME}
     - name: Assign NEW issues and NEW pull requests to project 2
       uses: SamMacy/assign-one-project-github-action@master
       if: github.event.action == 'opened'

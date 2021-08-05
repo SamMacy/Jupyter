@@ -20,4 +20,5 @@ jobs:
       with:
         project1: 'https://github.com/orgs/Senzing/projects/2'
         project2: 'https://github.com/users/SamMacy/projects/2'
+        topic: 't-comm'
         column_name: 'Backlog'

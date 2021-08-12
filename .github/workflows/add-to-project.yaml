@@ -20,5 +20,5 @@ jobs:
       uses: Senzing/github-action-add-issue-to-project@issue-7.macy.1
       with:
         project1: 'https://github.com/users/SamMacy/projects/2'
-        topic1: 't-comm'
+        topic1: 't-act'
         column_name: 'Backlog'

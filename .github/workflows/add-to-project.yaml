@@ -22,5 +22,5 @@ jobs:
         project1: 'https://github.com/users/SamMacy/projects/2'
       #  project2: 'https://github.com/users/SamMacy/projects/3'
         topic1: 't-comm'
-     #   topic2: 't-ast'
+        topic2: 't-ast'
         column_name: 'Backlog'

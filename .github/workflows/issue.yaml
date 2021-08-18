@@ -1,11 +1,18 @@
-on: 
+# Based on
+# - https://github.com/srggrs/assign-one-project-github-action
+
+name: members
+
+on:
   issues:
     types:
       - opened
+env:
+  GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
+
 jobs:
-  get_issue_maker: 
+  assign_one_project:
     runs-on: ubuntu-latest
     steps:
-      - name: View issue information
-        run: |
-          echo "Issue maker: ${{ github.actor }}"
+    - name: Check issue creator in org members
+      uses: SamMacy/Get-issue-creator@master

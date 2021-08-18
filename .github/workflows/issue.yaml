@@ -11,7 +11,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
 
 jobs:
-  check issue on membership:
+  check-membership:
     runs-on: ubuntu-latest
     steps:
     - name: Check issue creator in org members

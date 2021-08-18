@@ -9,7 +9,7 @@ on:
       - opened
 env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
-  BOOL: ${{ github.action.contains( test, es ) }}
+  BOOL: ${{ contains( 'test', 'es' ) }}
 
 jobs:
   check-membership:

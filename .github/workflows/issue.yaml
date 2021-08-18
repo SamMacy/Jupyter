@@ -9,6 +9,7 @@ on:
       - opened
 env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
+  BOOL: contains( "test", "es" )
 
 jobs:
   check-membership:
@@ -16,3 +17,8 @@ jobs:
     steps:
     - name: Check issue creator in org members
       uses: SamMacy/Get-issue-creator@master
+  print-bool:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo
+      run: echo "::${BOOL}"

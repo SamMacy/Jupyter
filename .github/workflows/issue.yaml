@@ -17,5 +17,5 @@ jobs:
   check-membership:
     runs-on: ubuntu-latest
     steps:
-    - name: Check issue creator in org members
+    - name: run script
       uses: SamMacy/Get-issue-creator@master

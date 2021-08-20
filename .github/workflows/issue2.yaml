@@ -1,0 +1,21 @@
+# Based on
+# - https://github.com/srggrs/assign-one-project-github-action
+
+name: members
+
+on:
+  issues:
+    types:
+      - opened
+env:
+  GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
+#  MEMBER_LIST: ${{ env.SENZING_MEMBERS }}
+#  CREATOR: ${{ github.actor }}
+#  BOOL: ${{ contains( ${MEMBER_LIST}, ${CREATOR} ) }}
+
+jobs:
+  check-membership:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run script
+      uses: SamMacy/Get-issue-creator@master

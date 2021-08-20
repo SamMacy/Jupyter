@@ -14,7 +14,7 @@ env:
   TITLE: ${{ github.event.issue.title }}
   NUMBER: ${{ github.event.issue.number }}
   TOKEN: ${{ secrets.SENZING_SLACK_BEARER_TOKEN }}
-  REPO_URL: ${{ github.event.repository.url}}
+  REPO_URL: ${{ github.repository.url}}
 
 jobs:
   check-membership:

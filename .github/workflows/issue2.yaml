@@ -12,6 +12,7 @@ env:
 #  MEMBER_LIST: ${{ env.SENZING_MEMBERS }}
 #  CREATOR: ${{ github.actor }}
 #  BOOL: ${{ contains( ${MEMBER_LIST}, ${CREATOR} ) }}
+  TOKEN: ${{ secrets.SENZING_SLACK_BEARER_TOKEN }}
 
 jobs:
   check-membership:

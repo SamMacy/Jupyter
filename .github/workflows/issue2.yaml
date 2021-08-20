@@ -22,3 +22,13 @@ jobs:
           BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
       if: ${{ env.BOOL == 'false' }}
       uses: SamMacy/Get-issue-creator@master
+  automate-issues-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: initial labeling
+        env:
+          BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
+        if: ${{ env.BOOL == 'false' }}
+        uses: andymckay/labeler@1.0.3
+        with:
+          add-labels: "customer-submission"

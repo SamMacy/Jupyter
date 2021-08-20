@@ -12,6 +12,7 @@ env:
   MEMBER_LIST: ${{ secrets.SENZING_MEMBERS }}
   CREATOR: ${{ github.actor }}
   TITLE: ${{ github.event.issue.title }}
+  NUMBER: ${{ github.event.number }}
   TOKEN: ${{ secrets.SENZING_SLACK_BEARER_TOKEN }}
 
 jobs:

@@ -1,7 +1,7 @@
 # Based on
 # - https://github.com/srggrs/assign-one-project-github-action
 
-name: members
+name: issue test
 
 on:
   issues:

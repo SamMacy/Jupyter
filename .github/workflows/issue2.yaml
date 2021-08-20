@@ -20,5 +20,5 @@ jobs:
     - name: run script
       env:
           BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
-      if: ${{ env.BOOL == 'true' }}
+      if: ${{ env.BOOL == 'false' }}
       uses: SamMacy/Get-issue-creator@master

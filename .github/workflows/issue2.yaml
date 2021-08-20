@@ -11,7 +11,6 @@ env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
   MEMBER_LIST: ${{ secrets.SENZING_MEMBERS }}
   CREATOR: ${{ github.actor }}
-#  BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
   TOKEN: ${{ secrets.SENZING_SLACK_BEARER_TOKEN }}
 
 jobs:
@@ -20,4 +19,6 @@ jobs:
     steps:
     - name: run script
       if: ${{contains( env.MEMBERLIST, env.CREATOR ) }}
+      env:
+          BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
       uses: SamMacy/Get-issue-creator@master

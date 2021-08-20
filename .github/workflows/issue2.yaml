@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run script
-      if: ${{ contains( env.MEMBERLIST, env.CREATOR ) == 'true' }}
       env:
           BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
+      if: ${{ env.BOOL == 'true' }
       uses: SamMacy/Get-issue-creator@master

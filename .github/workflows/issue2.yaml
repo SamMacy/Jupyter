@@ -11,7 +11,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
   MEMBER_LIST: ${{ secrets.SENZING_MEMBERS }}
   CREATOR: ${{ github.actor }}
-  TEST: ${{ env.MEMBER_LIST }}
+  TEST: ${{ MEMBER_LIST }}
 #  BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
   TOKEN: ${{ secrets.SENZING_SLACK_BEARER_TOKEN }}
 

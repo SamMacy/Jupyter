@@ -9,7 +9,7 @@ on:
       - opened
 env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
-  MEMBER_LIST: ${{ env.SENZING_MEMBERS }}
+  MEMBER_LIST: ${{ secrets.SENZING_MEMBERS }}
   CREATOR: ${{ github.actor }}
   BOOL: ${{ contains( ${MEMBER_LIST}, ${CREATOR} ) }}
   TOKEN: ${{ secrets.SENZING_SLACK_BEARER_TOKEN }}

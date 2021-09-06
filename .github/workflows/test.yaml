@@ -8,7 +8,7 @@ on:
       
 jobs:
   get-file:
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     steps:
     - name: get file
       run: |

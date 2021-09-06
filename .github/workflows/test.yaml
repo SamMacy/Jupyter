@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: get file
       run: |
-        curl -H  https://github.com/SamMacy/playground/blob/master/.github/workflows/add-to-project.yaml
+        curl -H  https://raw.githubusercontent.com/sammacy/playground/master/.github/workflows/test.yaml

@@ -7,7 +7,7 @@ on:
       
       
 jobs:
-  get file:
+  get-file:
     runs-on: ubunut-latest
     steps:
     - name: get file

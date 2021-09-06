@@ -11,5 +11,5 @@ jobs:
     runs-on: ubunut-latest
     steps:
     - name: get file
-    run: |
-      curl -H  https://github.com/SamMacy/playground/blob/master/.github/workflows/add-to-project.yaml
+      run: |
+        curl -H  https://github.com/SamMacy/playground/blob/master/.github/workflows/add-to-project.yaml

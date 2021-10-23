@@ -1,0 +1,14 @@
+name: Simple Issue Labeler
+on:
+  issues:
+    types:
+      - reopened
+      - opened
+jobs:
+  automate-issues-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: initial labeling
+        uses: andymckay/labeler@1.0.3
+        with:
+          add-labels: "triage"

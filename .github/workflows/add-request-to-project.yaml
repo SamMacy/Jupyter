@@ -1,22 +1,25 @@
 # Based on
 # - https://github.com/srggrs/assign-one-project-github-action
 
-name: Auto Assign labeled pull-request to project
+name: Add dependabot pull requests to project
 
 on:
   pull_request:
-    types: 
+    types:
       - labeled
 env:
-  GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  CREATOR: ${{ github.actor }}
 
 jobs:
   assign_one_project:
     runs-on: ubuntu-latest
     steps:
-    - name: Assign labeled pull-request to project
+    - name: Assign issues to project
+      env:
+          BOOL: ${{ contains( env.CREATOR, 'SamMacy' ) }}
       uses: Senzing/github-action-add-issue-to-project@main
-      if: contains(github.event.pull_request.labels.*.name, 'testing-bot')
+      if: ${{ env.BOOL == 'true' }}
       with:
-        project: 'https://github.com/SamMacy/playground/projects/2'
-        column_name: 'Backlog'
+        project: 'https://github.com/users/SamMacy/projects/3'
+        column_name: 'In progress'

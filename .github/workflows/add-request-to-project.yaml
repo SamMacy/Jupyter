@@ -5,8 +5,8 @@ name: Auto Assign labeled pull-request to project
 
 on:
   pull_request:
-    types:
-      - labled
+    types: 
+      - labeled
 env:
   GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
 

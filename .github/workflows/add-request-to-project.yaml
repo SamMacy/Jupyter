@@ -22,4 +22,3 @@ jobs:
       if: ${{ env.BOOL == 'true' }}
       with:
         project: 'https://github.com/users/SamMacy/projects/3'
-        column_name: 'In progress'

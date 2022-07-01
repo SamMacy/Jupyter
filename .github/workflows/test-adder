@@ -1,0 +1,21 @@
+# Based on
+# - https://github.com/srggrs/assign-one-project-github-action
+
+name: Auto Assign labeled pull-request to project
+
+on:
+  issue:
+    types: 
+      - opened
+env:
+  GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
+
+jobs:
+  assign_one_project:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Assign labeled pull-request to project
+      uses: Senzing/github-action-add-issue-to-project@main
+      with:
+        project: 'https://github.com/SamMacy/playground/projects/2'
+        column_name: 'Backlog'

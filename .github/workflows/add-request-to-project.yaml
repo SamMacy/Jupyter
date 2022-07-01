@@ -18,7 +18,7 @@ jobs:
     - name: Assign issues to project
       env:
           BOOL: ${{ contains( env.CREATOR, 'SamMacy' ) }}
-      uses: Senzing/github-action-add-issue-to-project@main
+      uses: SamMacy/github-action-add-issue-to-project@main
       if: ${{ env.BOOL == 'true' }}
       with:
         project: 'https://github.com/users/SamMacy/projects/3'

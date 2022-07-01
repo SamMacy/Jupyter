@@ -14,5 +14,5 @@ jobs:
         with:
           project-url: https://github.com/SamMacy/playground/projects/2
           github-token: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
-          labeled: dependencies, github_actions
+          labeled: testing-bot
           label-operator: AND

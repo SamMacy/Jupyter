@@ -1,7 +1,7 @@
 # Based on
 # - https://github.com/srggrs/assign-one-project-github-action
 
-name: Auto Assign labeled pull-request to project
+name: test-issue-assigner
 
 on:
   issues:

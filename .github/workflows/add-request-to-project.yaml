@@ -1,19 +1,21 @@
-name: Auto Assign to Project(s)
+# Based on
+# - https://github.com/srggrs/assign-one-project-github-action
+
+name: Auto Assign labeled pull-request to project
 
 on:
   pull_request:
-    types: 
-      - labeled
+    types:
+      - labled
 env:
-  MY_GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
 
 jobs:
   assign_one_project:
     runs-on: ubuntu-latest
-    name: Assign to One Project
     steps:
-    - name: Assign NEW issues and NEW pull requests to project 2
-      uses: srggrs/assign-one-project-github-action@1.2.1
+    - name: Assign labeled pull-request to project
+      uses: Senzing/github-action-add-issue-to-project@main
       if: contains(github.event.pull_request.labels.*.name, 'testing-bot')
       with:
         project: 'https://github.com/SamMacy/playground/projects/2'
